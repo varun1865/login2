@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .login-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .login-form input {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .login-form button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+</style>
+</head>
+<body>
+
+<div class="login-form">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return false;">
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <br>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <br>
+        <button onclick="validateLogin()">Login</button>
+    </form>
+</div>
+
+<script>
+    function validateLogin() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Example of simple validation (replace with actual logic)
+        if (username === 'admin' && password === 'password') {
+            alert('Login successful!'); // Replace with your desired popup message
+            // You can redirect to another page or perform other actions here
+        } else {
+            alert('Invalid username or password. Please try again.');
+        }
+    }
+</script>
+
+</body>
+</html>
